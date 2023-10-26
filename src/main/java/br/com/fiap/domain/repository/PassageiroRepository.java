@@ -1,7 +1,6 @@
 package br.com.fiap.domain.repository;
 
 import br.com.fiap.domain.entity.Passageiro;
-import br.com.fiap.domain.entity.transportavel.Passageiro;
 import br.com.fiap.infra.security.repository.Repository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;

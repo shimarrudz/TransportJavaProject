@@ -1,7 +1,7 @@
 package br.com.fiap.domain.service;
 
 import br.com.fiap.domain.entity.Pacote;
-import br.com.fiap.domain.entity.repository.PacoteRepository;
+import br.com.fiap.domain.repository.PacoteRepository;
 import br.com.fiap.infra.database.EntityManagerFactoryProvider;
 import br.com.fiap.infra.security.service.Service;
 import jakarta.persistence.EntityManager;
@@ -40,7 +40,6 @@ public class PacoteService implements Service<Pacote, Long> {
     public Pacote findById(Long id) {
         return repo.findById(id);
     }
-
 
 
     @Override

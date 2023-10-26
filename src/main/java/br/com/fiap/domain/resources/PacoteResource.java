@@ -3,8 +3,6 @@ package br.com.fiap.domain.resources;
 import br.com.fiap.Main;
 import br.com.fiap.domain.dto.PacoteDTO;
 import br.com.fiap.domain.entity.Pacote;
-import br.com.fiap.domain.entity.dto.PacoteDTO;
-import br.com.fiap.domain.entity.service.PacoteService;
 import br.com.fiap.domain.service.PacoteService;
 import br.com.fiap.infra.security.resources.Resource;
 import jakarta.ws.rs.GET;
@@ -46,13 +44,14 @@ public class PacoteResource implements Resource<PacoteDTO, Long> {
 
         return Response.ok(PacoteDTO.of(Pacote)).build();
 
-
     }
 
     @POST
     @Override
-    public Response persist(Pacote Pacote) {
-        Pacote persisted = service.persist(Pacote);
+    public Response persist(PacoteDTO Pacote) {
+
+
+        Pacote persisted = service.persist(PacoteDTO.of(Pacote));
 
         if (Objects.isNull(persisted)) return Response.status(400).build();
 

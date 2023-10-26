@@ -2,7 +2,6 @@ package br.com.fiap.domain.dto;
 
 import br.com.fiap.Main;
 import br.com.fiap.domain.entity.Passageiro;
-import br.com.fiap.domain.entity.transportavel.Passageiro;
 import br.com.fiap.domain.service.PassageiroService;
 import br.com.fiap.infra.security.dto.PessoaFisicaDTO;
 import br.com.fiap.infra.security.entity.PessoaFisica;

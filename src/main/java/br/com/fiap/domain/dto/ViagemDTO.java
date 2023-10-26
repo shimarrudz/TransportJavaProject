@@ -30,7 +30,7 @@ public record ViagemDTO(
     private static PessoaFisicaService pfService = PessoaFisicaService.of(Main.PERSISTENCE_UNIT);
     private static PessoaJuridicaService pjService = PessoaJuridicaService.of(Main.PERSISTENCE_UNIT);
     private static PassageiroService passageiroService = PassageiroService.build(Main.PERSISTENCE_UNIT);
-    private static PacoteService PacoteService = PacoteService.build(Main.PERSISTENCE_UNIT);
+    private static PacoteService pacoteService = PacoteService.build(Main.PERSISTENCE_UNIT);
 
     private static EnderecoService enderecoService = EnderecoService.build(Main.PERSISTENCE_UNIT);
 
@@ -71,7 +71,7 @@ public record ViagemDTO(
                 if (t.getTipo().equalsIgnoreCase("PASSAGEIRO")) {
                     p.addTransportavel(passageiroService.findById(t.getId()));
                 } else {
-                    p.addTransportavel(PacoteService.findById(t.getId()));
+                    p.addTransportavel(pacoteService.findById(t.getId()));
                 }
             });
         }
